@@ -1,0 +1,144 @@
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <style>
+        /* Styles CSS */
+        * {
+            margin: 0;
+            padding: 0;
+          <!DOCTYPE html>  box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .interests {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .interest-tag {
+            background: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #c0392b;
+        }
+
+        .passion-img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Section À propos -->
+        <section class="section" id="about">
+            <h1>👋 Bonjour, je suis touapri lago christ levi</h1>
+            <p>je viens de m'initier dans le developpement web je ne peux pas dire developpeur junior je vais dire plutôt debutant</p>
+            
+            <h2>Mon Parcours</h2>
+            <p>ancien footballeur amateur,aujourd'hui je me spécialise dans le développement front-end.</p>
+            
+            <h2>Centres d'intérêt</h2>
+            <div class="interests">
+                <span class="interest-tag">voyage</span>
+                <span class="interest-tag">aider les personnes defavorisé</span>
+                <span class="interest-tag"> sport</span>
+            </div>
+        </section>
+
+        <!-- Section Passion -->
+        <section class="section" id="passion">
+            <h2>💻 Ma Passion : Le football</h2>
+            <img src="https://cdn.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png" alt="Développement web" class="passion-img">
+            <p>Ce qui me passionne dans le développement web :</p>
+            <ul>
+                <li>La possibilité de créer à partir de rien</li>
+                <li>L'aspect à la fois technique et créatif</li>
+                <li>L'évolution constante des technologies</li>
+            </ul>
+            
+            <button onclick="showMessage()">Voir ma citation préférée</button>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript
+        function showMessage() {
+            alert("« Le meilleur moyen de prédire l'avenir, c'est de le créer. » - Peter Drucker");
+        }
+
+        // Animation au survol des sections
+        document.querySelectorAll('.section').forEach(section => {
+            section.addEventListener('mouseover', () => {
+                section.style.backgroundColor = '#f8f9fa';
+            });
+            
+            section.addEventListener('mouseout', () => {
+                section.style.backgroundColor = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
